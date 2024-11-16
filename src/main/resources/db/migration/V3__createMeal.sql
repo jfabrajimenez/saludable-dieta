@@ -2,7 +2,7 @@ create table if not exists meal(
     id serial not null primary key,
     id_diet int not null,
     id_dish int not null,
-    date timestamp,
+    name varchar(10),
     moment varchar(20),
     "order" int
 );
