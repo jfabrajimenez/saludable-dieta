@@ -26,6 +26,7 @@ public class MealEntity {
   @Column(nullable = false)
   private String moment;
 
+  @Column(name = "meal_order")
   private Integer order;
 
   @ManyToOne

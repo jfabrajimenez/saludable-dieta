@@ -4,7 +4,7 @@ create table if not exists meal(
     id_dish int not null,
     name varchar(10),
     moment varchar(20),
-    "order" int
+    meal_order int
 );
 
 alter table if exists meal
