@@ -7,4 +7,6 @@ import org.mapstruct.Mapper;
 @Mapper(componentModel = "spring")
 public interface DietDbMapper {
   DietEntity toEntity(Diet diet);
+
+  Diet toDomain(DietEntity diet);
 }

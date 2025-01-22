@@ -1,6 +1,5 @@
 package com.saludable.dieta.infra.rest.spring.creatediet.model;
 
-
 import java.time.LocalDate;
 import java.util.List;
 

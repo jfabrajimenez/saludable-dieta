@@ -1,9 +1,10 @@
 package com.saludable.dieta.infra.rest.spring.creatediet.controller;
 
 import com.saludable.dieta.application.domain.Diet;
-import com.saludable.dieta.application.usecase.CreateDietUseCase;
+import com.saludable.dieta.application.usecase.creatediet.CreateDietUseCase;
 import com.saludable.dieta.infra.rest.spring.creatediet.mapper.CreateDietMapper;
 import com.saludable.dieta.infra.rest.spring.creatediet.model.DietRequest;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -18,7 +19,7 @@ public class CreateDietController {
   private final CreateDietMapper createDietMapper;
 
   @PostMapping("/save")
-  public void save(@RequestBody DietRequest dietRequest) {
+  public void save(@RequestBody @Valid DietRequest dietRequest) {
     Diet diet = createDietMapper.toDomain(dietRequest);
     createDietUseCase.save(diet);
   }

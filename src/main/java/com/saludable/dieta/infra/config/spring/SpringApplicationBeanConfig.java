@@ -1,7 +1,7 @@
 package com.saludable.dieta.infra.config.spring;
 
 import com.saludable.dieta.application.repository.DietRepository;
-import com.saludable.dieta.application.usecase.CreateDietUseCase;
+import com.saludable.dieta.application.usecase.creatediet.CreateDietUseCase;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

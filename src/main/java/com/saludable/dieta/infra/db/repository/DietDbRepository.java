@@ -53,4 +53,15 @@ public class DietDbRepository implements DietRepository {
     DishEntity dishToSave = dishDbMapper.toEntity(dish);
     return dishRepository.save(dishToSave);
   }
+
+  @Override
+  public Optional<Diet> findMoreActualDiet() {
+    Optional<DietEntity> moreActualDiet = dietRepository.findTopByOrderByStartDesc();
+
+    if (moreActualDiet.isPresent()) {
+      return Optional.of(dietDbMapper.toDomain(moreActualDiet.get()));
+    }
+
+    return Optional.empty();
+  }
 }

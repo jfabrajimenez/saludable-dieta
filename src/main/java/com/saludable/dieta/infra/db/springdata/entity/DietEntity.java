@@ -19,7 +19,7 @@ public class DietEntity {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
-  @Column(name = "start_date")
+  @Column(name = "start_date", nullable = false)
   private LocalDate start;
 
   @Column(name = "end_date")
